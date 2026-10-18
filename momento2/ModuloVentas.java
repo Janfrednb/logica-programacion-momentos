@@ -43,6 +43,26 @@ public class ModuloVentas {
         
         } while (opcionMenu != 4);
 
+         double valorDescuento = 0;
+            if (totalBruto > MONTO_MINIMO_DESCUENTO) {
+                valorDescuento = totalBruto * DESCUENTO;
+        }
+         double valorConDescuento = totalBruto - valorDescuento;
+         double valorIva = valorConDescuento * IVA;
+         double totalPagar = valorConDescuento + valorIva;
+        double porcentajePremium = 0;
+        if (totalProductos > 0) {
+            porcentajePremium = ((double) totalProductosPremium / totalProductos) * 100;
+        }
+        System.out.println("=================FACTURA===============");
+        System.out.println("Productos vendidos: " + totalProductos);
+        System.out.println("Precio total sin descuento y sin IVA: " + totalBruto);
+        System.out.println("Descuento aplicado: " + valorDescuento);
+        System.out.println("Valor con descuento: " + valorConDescuento);
+        System.out.println("IVA: " + valorIva);
+        System.out.println("Total a pagar: " + totalPagar);
+        System.out.println("Porcentaje de productos premium: " + porcentajePremium + "%");
+
         elqueleetodo.close();
     }
 }
