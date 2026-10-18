@@ -25,6 +25,22 @@ public class ModuloVentas {
             System.out.println("4. Finalizar Compra");
             System.out.println("Seleccione una Opción");
             opcionMenu = elqueleetodo.nextInt();
+            if (opcionMenu == 1) {
+                totalBruto = totalBruto + PRECIO_CASE_IPHONE; 
+                totalProductos++;
+        } else if (opcionMenu == 2) {
+                totalBruto = totalBruto + PRECIO_CARGADOR_IPHONE;
+                totalProductos++;
+        } else if (opcionMenu == 3) {
+                totalBruto = totalBruto + PRECIO_IPHONE_18_PRO_MAX;
+                totalProductos++;
+                totalProductosPremium++;
+        } else if (opcionMenu == 4) {
+            System.out.println("Finalizando Venta");
+        } else {
+            System.out.println("Error Fulminante, Intente de nuevo");
+        }
+        
         } while (opcionMenu != 4);
 
         elqueleetodo.close();
