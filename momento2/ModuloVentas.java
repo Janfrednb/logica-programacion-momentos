@@ -17,6 +17,16 @@ public class ModuloVentas {
         int totalProductosPremium = 0;
         int opcionMenu = 0;
 
+
+        do { 
+            System.out.println("1. Case Iphone (Basico) valor = $80.000");
+            System.out.println("2. Cargador Iphone (Medio) valor = $130.000");
+            System.out.println("3. Iphone 18 Pro Max (Premium) valor = $6.200.000");
+            System.out.println("4. Finalizar Compra");
+            System.out.println("Seleccione una Opción");
+            opcionMenu = elqueleetodo.nextInt();
+        } while (opcionMenu != 4);
+
         elqueleetodo.close();
     }
 }
