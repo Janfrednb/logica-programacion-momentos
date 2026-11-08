@@ -43,4 +43,14 @@ public class GestorLoteAmericanEagle {
         lectorTeclado.close();
     }
 
+    public static boolean buscarReferencia(String[] loteColeccion, String nombreBuscado) {
+        for (int i = 0; i < loteColeccion.length; i++) {
+            if (loteColeccion[i] != null && loteColeccion[i].equals(nombreBuscado)) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
 }
