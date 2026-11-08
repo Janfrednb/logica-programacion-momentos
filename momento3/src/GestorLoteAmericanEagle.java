@@ -18,10 +18,15 @@ public class GestorLoteAmericanEagle {
             opcionMenu = lectorTeclado.nextInt();
             switch (opcionMenu) {
     case 1:
-        System.out.println("Listando colección");
+        for (int i = 0; i < loteColeccion.length; i++) {
+            if(loteColeccion[i] != null){
+                System.out.println(loteColeccion[i]);
+            }
+            
+        }
         break;
     case 2:
-        System.out.println("Buscando refencia en el lote");
+        System.out.println("Buscando referencia en el lote");
         break;
     case 3:
         System.out.println("Ingresando prenda al lote");
@@ -30,7 +35,7 @@ public class GestorLoteAmericanEagle {
         System.out.println("Finalizando menú");
         break;
     default:
-        System.out.println("Opción no valida, intente nuevaemnte");
+        System.out.println("Opción no valida, intente nuevamente");
         break;
 }
         } while (opcionMenu !=4);
