@@ -26,11 +26,40 @@ public class GestorLoteAmericanEagle {
                     }
                     break;
                 case 2:
-                    System.out.println("Buscando referencia en el lote");
+                    lectorTeclado.nextLine();
+                    System.out.print("Ingrese el nombre de la prenda: ");
+                    String nombreBuscado = lectorTeclado.nextLine();
+
+                    boolean prendaEncontrada = buscarReferencia(loteColeccion, nombreBuscado);
+
+                    if (prendaEncontrada) {
+                        System.out.println("La prenda " + nombreBuscado + " está en el lote");
+                    } else {
+                        System.out.println("La prenda " + nombreBuscado + " no está en el lote");
+                    }
                     break;
                 case 3:
-                    System.out.println("Ingresando prenda al lote");
+                    lectorTeclado.nextLine();
+                    System.out.print("Ingrese el nombre de la nueva prenda: ");
+                    String nuevaPrenda = lectorTeclado.nextLine();
+
+                    boolean prendaGuardada = false;
+
+                    for (int i = 0; i < loteColeccion.length; i++) {
+                        if (loteColeccion[i] == null) {
+                            loteColeccion[i] = nuevaPrenda;
+                            prendaGuardada = true;
+                            break;
+                        }
+                    }
+
+                    if (prendaGuardada) {
+                        System.out.println("La prenda " + nuevaPrenda + " fue guardada en el lote");
+                    } else {
+                        System.out.println("El lote está lleno, no se pudo guardar la prenda");
+                    }
                     break;
+
                 case 4:
                     System.out.println("Finalizando menú");
                     break;
